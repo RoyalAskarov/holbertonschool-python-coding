@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 This module defines a Square class.
-It implements properties for the private size attribute and an area method.
+It uses properties for size validation and calculates the area.
 """
 
 
@@ -16,11 +16,11 @@ class Square:
     def __init__(self, size=0):
         self.size = size
 
-    # @property
+    @property
     def size(self):
         return self.__size
 
-    # @size.setter
+    @size.setter
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
